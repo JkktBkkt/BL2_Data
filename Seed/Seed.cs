@@ -75,8 +75,19 @@
 
                 // READ SEED OPTIONS
                 int i;
-                for (i = 5; i < 36; i++)
-                    options.Set_Option(lines[i]);
+                for (i = 5; i < 42; i++)
+                    if (lines[i]=="Borderlands 2")
+                    {
+                        break;
+                    }
+                    else if (lines[i]=="")
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        options.Set_Option(lines[i]);
+                    }
 
                 // 37 = Borderlands 2
                 for (; i < lines.Length; i++)

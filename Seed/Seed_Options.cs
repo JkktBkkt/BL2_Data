@@ -41,10 +41,10 @@
             misc.Add("Raids", false);
             misc.Add("Mission Locations", false);
             misc.Add("Special Vendors", false);
+            misc.Add("Freebies", false);
             misc.Add("Miscellaneous", false);
             misc.Add("Duplicate Items", false);
             misc.Add("Allow Hints", false);
-
 
             name_mapping.Add("BaseGame", "Base Game");
             name_mapping.Add("PiratesBooty", "Pirate's Booty");
@@ -76,6 +76,7 @@
             name_mapping.Add("Vendor", "Special Vendors");
             name_mapping.Add("namesellaneous", "namesellaneous");
             name_mapping.Add("Miscellaneous", "Miscellaneous");
+            name_mapping.Add("Freebie", "Freebies");
         }
 
         // -------------------------------------------------------------------------------------------------------------------------------------
@@ -93,7 +94,7 @@
                 misc[parts[0]] = parts[1].Trim().ToLower() == "on";
 
             else
-                throw new Exception("Unexpected error reading seed options");
+                throw new Exception("Unexpected error reading seed options " + line);
         }
 
         // -------------------------------------------------------------------------------------------------------------------------------------
